@@ -36,4 +36,8 @@ public class Capteur implements Serializable {
 
     private Long idUtilisateur;
 
+    @Override
+    public String toString() {
+        return "Capteur{id=" + id + ", longitude=" + longitude + ", latitude=" + latitude + ", intervalle=" + intervalle +'}';
+    }
 }
