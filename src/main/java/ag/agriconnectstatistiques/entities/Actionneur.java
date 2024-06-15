@@ -26,4 +26,9 @@ public class Actionneur implements Serializable {
     private double longitude;
 
     private double latitude;
+
+    @Override
+    public String toString() {
+        return "Actionneur{id=" + id + ", longitude=" + longitude + ", latitude=" + latitude + ", etat=" + etat +'}';
+    }
 }

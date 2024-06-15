@@ -1,22 +1,8 @@
 spring:
   application:
     name: acstatistiques
-
-server:
-  port: 10010
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: env,health,
-          info,metrics,
-          loggers,mappings, prometheus
-  tracing:
-    sampling:
-      probability: 1.0
-
-# Configuration du log.
-logging:
-  level:
-    org.springframework.web: INFO # Choix du niveau de log affiché
+  profiles:
+    active: dev
+    # Adresse du service de configuration
+  config :
+    import: optional:configserver:http://localhost:10002
